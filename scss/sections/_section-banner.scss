@@ -1,0 +1,73 @@
+.section-banner {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	background-color: $background;
+
+	@media (min-width: $md) {
+		padding-top: 140px;
+		padding-bottom: 140px;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: $thirdy;
+		background-image: url(@img/section-banner-back.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top;
+		padding: 50px 30px;
+		border-radius: 20px;
+
+		@media (min-width: $md) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		@media (min-width: $lg) {
+			padding: 60px 50px;
+		}
+
+		@media (min-width: $xl) {
+			padding: 60px 100px;
+		}
+	}
+
+	&__content {
+		margin-bottom: 20px;
+
+		@media (min-width: $md) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		color: $white;
+		margin-bottom: 20px;
+		text-align: center;
+
+		@media (min-width: $md) {
+			text-align: left;
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 22px;
+		text-align: center;
+		color: $white;
+
+		@media (min-width: $lg) {
+			font-size: 22px;
+			line-height: 29px;
+			text-align: left;
+		}
+	}
+
+	&__link {
+		padding: 13px 60px;
+	}
+}

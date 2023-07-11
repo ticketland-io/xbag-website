@@ -1,0 +1,93 @@
+.section-squares {
+	background-color: $primary;
+	background-image: url(@img/section-squares-back-2.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-top: 70px;
+	padding-bottom: 152px;
+	position: relative;
+
+	@media (min-width: $md) {
+		padding-top: 140px;
+		background-image: url(@img/section-squares-back.svg);
+		padding-bottom: 90px;
+	}
+
+	@media (min-width: $lg) {
+		padding-bottom: 122px;
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		width: 90%;
+		height: 102px;
+		position: absolute;
+		background-image: url(@img/section-squares-2.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		bottom: 27px;
+		right: 20px;
+		z-index: 1;
+
+		@media (min-width: $md) {
+			width: 360px;
+			height: 420px;
+			background-image: url(@img/section-squares.svg);
+			bottom: unset;
+		}
+
+		@media (min-width: $lg) {
+			width: 437px;
+			height: 485px;
+			top: 27px;
+		}
+	}
+
+	&__title {
+		color: $white;
+		margin-bottom: 50px;
+
+		@media (min-width: $lg) {
+			margin-bottom: 90px;
+		}
+	}
+
+	&__content {
+		max-width: 450px;
+		position: relative;
+		z-index: 2;
+
+		@media (min-width: $lg) {
+			max-width: 685px;
+		}
+	}
+
+	&__list {
+		@media (min-width: $md) {
+			max-width: 360px;
+		}
+
+		@media (min-width: $lg) {
+			max-width: 100%;
+		}
+	}
+
+	&__item {
+		margin-bottom: 50px;
+
+		@media (min-width: $lg) {
+			margin-bottom: 20px;
+		}
+
+		&-title {
+			color: $white;
+		}
+
+		&-text {
+			color: $white;
+		}
+	}
+}

@@ -1,0 +1,72 @@
+body {
+	@include indent-reset();
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	background-color: #fcfcfc;
+	transition: all 200ms ease-in-out;
+
+	&.menu-opened {
+		height: 100vh;
+		overflow: hidden;
+	}
+}
+
+.main {
+	position: relative;
+	overflow: hidden;
+	padding-top: 50px;
+	z-index: 1;
+
+	@media (min-width: $xl) {
+		padding-top: 70px;
+	}
+
+	&--top {
+		padding-top: 0;
+		z-index: 1;
+	}
+}
+
+.page-with-sidebar {
+	@media (min-width: $md) {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.container {
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+
+	@media (min-width: $sm) {
+		max-width: 100%;
+	}
+
+	@media (min-width: $md) {
+		max-width: 760px;
+	}
+
+	@media (min-width: $lg) {
+		max-width: 960px;
+	}
+
+	@media (min-width: $xl) {
+		max-width: 1320px;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}

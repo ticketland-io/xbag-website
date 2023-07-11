@@ -1,0 +1,146 @@
+.section-testimonials {
+	padding-top: 70px;
+	padding-bottom: 108px;
+	background-color: $background;
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 325px;
+		height: 222px;
+
+		background-image: url(@img/section-testimonials-back.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: left bottom;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+
+		@media (min-width: $md) {
+			width: 526px;
+			height: 360px;
+		}
+	}
+
+	@media (min-width: $md) {
+		padding-top: 140px;
+		padding-bottom: 140px;
+	}
+
+	&__title {
+		color: $black;
+		text-align: center;
+		margin-bottom: 48px;
+
+		@media (min-width: $md) {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__swiper {
+		max-width: 1064px;
+	}
+
+	&__list {
+		margin-bottom: 0;
+	}
+
+	&__item {
+		padding: 50px 25px 74px 25px;
+		background: $white;
+		border-radius: 10px;
+
+		@media (min-width: $md) {
+			display: flex;
+			justify-content: space-between;
+			padding: 45px 80px 35px 80px;
+		}
+
+		@media (min-width: $lg) {
+			padding: 45px 100px 35px 100px;
+		}
+
+		&-wrapper {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 22px;
+
+			@media (min-width: $md) {
+				margin-right: 40px;
+				margin-bottom: 0;
+			}
+
+			@media (min-width: $lg) {
+				margin-right: 60px;
+			}
+		}
+
+		&-image {
+			width: 121px;
+			height: 121px;
+			border-radius: 50%;
+			overflow: hidden;
+
+			img {
+				@include img-cover-center();
+			}
+
+			@media (min-width: $lg) {
+				width: 145px;
+				height: 145px;
+			}
+		}
+
+		&-meta {
+			margin-top: -12px;
+		}
+
+		&-name {
+			font-weight: 700;
+			font-size: 19px;
+			line-height: 25px;
+			text-align: center;
+			background-color: #35517b;
+			color: $white;
+			padding: 5px 14px;
+			border-radius: 26px;
+			transform: rotate(-1deg);
+
+			span {
+				display: block;
+				transform: rotate(1deg);
+			}
+
+			@media (min-width: $lg) {
+				font-size: 22px;
+				line-height: 29px;
+				padding: 6px 20px;
+			}
+		}
+
+		&-text {
+			padding-top: 9px;
+		}
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		top: 120px;
+
+		@media (min-width: $md) {
+			top: 136px;
+		}
+	}
+
+	.swiper-pagination-bullets.swiper-pagination-horizontal {
+		bottom: -50px;
+
+		@media (min-width: $lg) {
+			display: none;
+		}
+	}
+}

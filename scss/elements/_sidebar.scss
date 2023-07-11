@@ -1,0 +1,45 @@
+.sidebar {
+	flex-shrink: 0;
+	margin-bottom: 60px;
+
+	@media (min-width: $md) {
+		margin-bottom: 0;
+	}
+
+	@media (min-width: $md) {
+		padding-top: 80px;
+		width: 200px;
+		margin-left: 40px;
+		display: block;
+	}
+
+	@media (min-width: $lg) {
+		padding-top: 100px;
+		width: 305px;
+		margin-left: 130px;
+		display: block;
+	}
+
+	&__widget {
+		margin-bottom: 26px;
+
+		&-title {
+			margin-bottom: 9px;
+			font-weight: 700;
+			font-size: 22px;
+			line-height: 29px;
+		}
+
+		&-list {
+			margin-bottom: 0;
+
+			li {
+				margin-bottom: 4px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

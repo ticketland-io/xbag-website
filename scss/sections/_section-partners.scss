@@ -1,0 +1,51 @@
+.section-partners {
+	background-color: $thirdy;
+
+	&__container {
+		position: relative;
+	}
+
+	&__swiper {
+		padding-top: 30px;
+		padding-bottom: 90px;
+
+		@media (min-width: $md) {
+			padding-top: 82px;
+			padding-bottom: 90px;
+		}
+
+		@media (min-width: $xl) {
+			padding-bottom: 82px;
+		}
+	}
+
+	&__list {
+		margin-bottom: 0;
+		align-items: center;
+	}
+
+	&__image {
+		height: 50px;
+		padding: 0 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@media (min-width: $md) {
+			padding: 0 5px;
+			height: 64px;
+		}
+
+		img {
+			@include img-contain();
+		}
+	}
+
+	.swiper-pagination-bullets.swiper-pagination-horizontal {
+		bottom: 30px;
+
+		@media (min-width: $xl) {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,169 @@
+.section-hero {
+	margin-bottom: 70px;
+
+	@media (min-width: $md) {
+		margin-bottom: 140px;
+	}
+
+	&__slide {
+		padding-top: 110px;
+		height: 693px;
+		position: relative;
+		background: $background;
+
+		@media (min-width: $md) {
+			padding-top: 130px;
+			height: 500px;
+		}
+
+		@media (min-width: $lg) {
+			padding-top: 157px;
+			height: 680px;
+		}
+
+		@media (min-width: $xl) {
+			height: 762px;
+		}
+	}
+
+	&__back {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 232px;
+		height: auto;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: top left;
+		}
+
+		@media (min-width: $md) {
+			width: 360px;
+			height: 100%;
+		}
+
+		@media (min-width: $lg) {
+			top: 0;
+			width: 460px;
+		}
+
+		@media (min-width: $xl) {
+			width: 594px;
+		}
+	}
+
+	&__container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+
+		@media (min-width: $md) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__image {
+		width: 200px;
+		height: 250px;
+		align-self: flex-end;
+
+		@media (min-width: $md) {
+			width: 320px;
+			height: 100%;
+		}
+
+		@media (min-width: $lg) {
+			width: 400px;
+			height: 100%;
+		}
+
+		@media (min-width: $xl) {
+			width: 500px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			object-position: center bottom;
+		}
+	}
+
+	&__content {
+		max-width: 400px;
+
+		@media (min-width: $md) {
+			max-width: 380px;
+		}
+
+		@media (min-width: $lg) {
+			flex-shrink: 0;
+			max-width: 500px;
+		}
+
+		@media (min-width: $xl) {
+			max-width: 605px;
+		}
+	}
+
+	&__text {
+		font-size: 17px;
+		line-height: 23px;
+		margin-bottom: 27px;
+		color: $black;
+
+		@media (min-width: $lg) {
+			max-width: 495px;
+			font-size: 22px;
+			line-height: 29px;
+			margin-bottom: 60px;
+		}
+	}
+
+	&__title {
+		font-size: 34px;
+		line-height: 38px;
+		margin-bottom: 15px;
+		color: $black;
+
+		@media (min-width: $lg) {
+			font-size: 52px;
+			line-height: 60px;
+			margin-bottom: 32px;
+		}
+	}
+
+	&__link {
+		width: 100%;
+
+		@media (min-width: $md) {
+			width: auto;
+		}
+	}
+
+	&__pagination {
+		position: absolute;
+		bottom: 10px;
+		right: 0;
+		left: 0;
+
+		.swiper-pagination {
+			bottom: 0;
+		}
+
+		@media (min-width: $xl) {
+			bottom: 30px;
+		}
+	}
+}

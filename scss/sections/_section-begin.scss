@@ -1,0 +1,111 @@
+.section-begin {
+	background-color: $secondary;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 95%;
+		height: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-image: url(@img/section-begin-back.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: bottom right;
+		z-index: 1;
+
+		@media (min-width: $md) {
+			width: 633px;
+		}
+	}
+
+	&__container {
+		padding: 80px 20px 70px 20px;
+
+		@media (min-width: $md) {
+			padding: 80px 20px 80px 60px;
+		}
+
+		@media (min-width: $xl) {
+			padding: 155px 20px 160px 130px;
+		}
+	}
+
+	&__columns {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		z-index: 2;
+		position: relative;
+
+		@media (min-width: $md) {
+			flex-direction: row;
+		}
+	}
+
+	&__column {
+		@media (min-width: $lg) {
+			max-width: 460px;
+		}
+
+		&:not(:last-child) {
+			@media (min-width: $md) {
+				margin-right: 80px;
+			}
+
+			@media (min-width: $xl) {
+				margin-right: 180px;
+			}
+		}
+	}
+
+	&__image {
+		background-color: $white;
+		width: 180px;
+		height: 238px;
+		margin-bottom: 60px;
+		border-radius: 10px;
+		transform: rotate(-6deg);
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		overflow: hidden;
+
+		@media (min-width: $md) {
+			width: 270px;
+			height: 360px;
+			margin-bottom: 0;
+		}
+
+		@media (min-width: $lg) {
+			width: 300px;
+			height: 380px;
+		}
+
+		@media (min-width: $xl) {
+			width: 366px;
+			height: 483px;
+		}
+
+		img {
+			width: auto;
+			height: 85%;
+		}
+	}
+
+	&__title {
+		color: $black;
+	}
+
+	&__text {
+		color: $black;
+		margin-bottom: 35px;
+
+		@media (min-width: $md) {
+			margin-bottom: 40px;
+		}
+	}
+}

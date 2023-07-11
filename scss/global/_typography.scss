@@ -1,0 +1,128 @@
+body {
+	font-family: "Fira Sans", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: $black;
+
+	@media (min-width: $lg) {
+		font-size: 19px;
+		line-height: 29px;
+	}
+}
+
+p {
+	margin-bottom: 1em;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+a {
+	color: $accent;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: $accent;
+		text-decoration: underline;
+	}
+}
+
+.list {
+	@include indent-reset;
+	padding-left: 15px;
+	list-style-position: outside;
+	margin-top: 15px;
+	margin-bottom: 40px;
+
+	li {
+		padding-left: 8px;
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	@include indent-reset();
+}
+
+h1,
+.h1 {
+	font-weight: 700;
+	font-size: 34px;
+	line-height: 38px;
+	margin-bottom: 20px;
+
+	@media (min-width: $lg) {
+		font-size: 52px;
+		line-height: 58px;
+	}
+}
+
+h2,
+.h2 {
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 32px;
+	margin-bottom: 12px;
+
+	@media (min-width: $md) {
+		font-size: 42px;
+		line-height: 60px;
+		margin-bottom: 16px;
+	}
+
+	@media (min-width: $lg) {
+		font-size: 52px;
+		line-height: 60px;
+		margin-bottom: 22px;
+	}
+
+	.content & {
+		@media (min-width: $lg) {
+			font-size: 42px;
+			line-height: 46px;
+		}
+	}
+}
+
+h3,
+.h3 {
+	font-weight: 700;
+	font-size: 19px;
+	line-height: 25px;
+	margin-bottom: 12px;
+
+	@media (min-width: $lg) {
+		font-size: 22px;
+		line-height: 29px;
+	}
+
+	@media (min-width: $xl) {
+		font-size: 26px;
+		line-height: 34px;
+		margin-bottom: 11px;
+	}
+
+	.content & {
+		@media (min-width: $lg) {
+			font-size: 22px;
+			line-height: 29px;
+		}
+	}
+}

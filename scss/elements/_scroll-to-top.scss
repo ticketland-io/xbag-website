@@ -1,0 +1,27 @@
+.scroll-to-top {
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	width: 60px;
+	height: 60px;
+	opacity: 0;
+	background-color: transparent;
+	background-image: url(@img/scroll.svg);
+	border: 1px solid $accent;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	cursor: pointer;
+	transition: all 800ms ease-in-out;
+	overflow: hidden;
+	z-index: 1;
+
+	&.scrolled {
+		opacity: 0.8;
+	}
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}

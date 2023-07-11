@@ -1,0 +1,61 @@
+.section-numbers {
+	background-color: $background;
+	background-image: url(@img/section-numbers-back-2.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	padding-top: 50px;
+	padding-bottom: 3px;
+
+	@media (min-width: $md) {
+		background-image: url(@img/section-numbers-back.svg);
+		background-size: cover;
+		padding-top: 80px;
+		padding-bottom: 60px;
+	}
+
+	@media (min-width: $lg) {
+		padding-top: 140px;
+		padding-bottom: 124px;
+	}
+
+	&__title {
+		margin-bottom: 50px;
+
+		@media (min-width: $lg) {
+			margin-bottom: 90px;
+		}
+	}
+
+	&__item {
+		margin-bottom: 50px;
+
+		@media (min-width: $md) {
+			margin-bottom: 0;
+		}
+
+		&-wrapper {
+			max-width: 413px;
+		}
+
+		&-number {
+			font-size: 60px;
+			line-height: 60px;
+			font-weight: 700;
+			color: $thirdy;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+
+			@media (min-width: $lg) {
+				font-size: 80px;
+				line-height: 60px;
+				margin-bottom: 30px;
+			}
+
+			@media (min-width: $xl) {
+				font-size: 100px;
+				margin-bottom: 60px;
+			}
+		}
+	}
+}

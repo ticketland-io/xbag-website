@@ -1,0 +1,128 @@
+.section-perks {
+	margin-bottom: 70px;
+
+	@media (min-width: $md) {
+		margin-bottom: 140px;
+	}
+
+	&__columns {
+		background-color: $primary;
+		border-radius: 10px;
+		padding: 40px 25px 25px 25px;
+		margin-left: 0;
+		margin-right: 0;
+		position: relative;
+		overflow: hidden;
+
+		@media (min-width: $md) {
+			display: flex;
+			justify-content: space-between;
+			padding: 50px 50px 30px 50px;
+		}
+
+		@media (min-width: $xl) {
+			padding: 70px 100px;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 95%;
+			height: 270px;
+			background-image: url(@img/section-perks.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: bottom right;
+			z-index: 1;
+
+			@media (min-width: $lg) {
+				width: 531px;
+				height: 100%;
+			}
+		}
+	}
+
+	&__column {
+		position: relative;
+		z-index: 1;
+
+		@media (min-width: $md) {
+			width: 50%;
+		}
+
+		&:not(:last-child) {
+			padding-right: 10px;
+
+			@media (min-width: $md) {
+				padding-right: 40px;
+			}
+
+			@media (min-width: $lg) {
+				padding-right: 88px;
+			}
+		}
+	}
+
+	&__title {
+		color: $white;
+	}
+
+	&__text {
+		color: $white;
+		font-size: 16px;
+		line-height: 22px;
+		margin-bottom: 40px;
+
+		@media (min-width: $md) {
+			margin-bottom: 0;
+		}
+
+		@media (min-width: $lg) {
+			font-size: 20px;
+			line-height: 27px;
+		}
+
+		@media (min-width: $xl) {
+			font-size: 22px;
+			line-height: 29px;
+		}
+	}
+
+	&__list {
+		margin-bottom: 0;
+
+		@media (min-width: $lg) {
+			padding-top: 10px;
+			padding-left: 10px;
+		}
+	}
+
+	&__item {
+		color: $white;
+		font-weight: 700;
+		font-size: 19px;
+		line-height: 25px;
+		margin-bottom: 17px;
+
+		@media (min-width: $md) {
+			font-size: 20px;
+			line-height: 30px;
+			margin-bottom: 20px;
+		}
+
+		@media (min-width: $lg) {
+			font-size: 22px;
+			line-height: 30px;
+			margin-bottom: 30px;
+		}
+
+		@media (min-width: $xl) {
+			font-size: 26px;
+			line-height: 34px;
+			margin-bottom: 35px;
+		}
+	}
+}

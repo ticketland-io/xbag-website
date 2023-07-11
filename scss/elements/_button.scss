@@ -1,0 +1,58 @@
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 45px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 22px;
+	color: $white;
+	padding: 11px 30px 12px 30px;
+	border-radius: 32px;
+	transition: all 200ms ease-in-out;
+
+	@media (min-width: $md) {
+		padding: 17px 60px;
+		min-height: 60px;
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&--accent {
+		background-color: $accent;
+		border: 2px solid $accent;
+
+		&:hover,
+		&:focus {
+			color: $white;
+			background-color: $accent_hover;
+			border: 2px solid $white;
+			border: 2px solid $accent_hover;
+		}
+	}
+
+	&--primary {
+		background-color: $primary;
+		border: 2px solid $primary;
+		color: $white;
+
+		&:hover,
+		&:focus {
+			color: $primary;
+			background-color: $accent;
+			border: 2px solid $primary;
+		}
+	}
+
+	&--link {
+		background-color: transparent;
+		color: $primary;
+		text-decoration: underline;
+		padding: 0;
+	}
+}

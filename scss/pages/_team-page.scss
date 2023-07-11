@@ -1,0 +1,15 @@
+.team-page {
+	padding-top: 0;
+
+	.section-team {
+		margin-bottom: 100px;
+
+		@media (min-width: $md) {
+			margin-bottom: 200px;
+		}
+
+		&__title {
+			text-align: left;
+		}
+	}
+}

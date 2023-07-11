@@ -1,0 +1,25 @@
+.blog-post {
+	margin-bottom: 70px;
+
+	@media (min-width: $md) {
+		margin-bottom: 140px;
+	}
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	&__image {
+		border-radius: 10px;
+		overflow: hidden;
+		margin-bottom: 30px;
+
+		@media (min-width: $md) {
+			margin-bottom: 36px;
+		}
+
+		img {
+			@include img-cover-center();
+		}
+	}
+}

@@ -1,0 +1,105 @@
+.blog-pagination {
+	margin-bottom: 60px;
+
+	@media (min-width: $md) {
+		margin-bottom: 140px;
+	}
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__list {
+		margin-bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__item {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		background: #dcf2f4;
+		margin-left: 5px;
+		margin-right: 5px;
+		overflow: hidden;
+
+		@media (min-width: $md) {
+			width: 45px;
+			height: 45px;
+			margin-left: 8px;
+			margin-right: 8px;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: $accent_hover;
+
+			a {
+				color: $white;
+				text-decoration: none;
+			}
+		}
+
+		a {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 16px;
+			line-height: 22px;
+			color: $black;
+
+			@media (min-width: $md) {
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+
+		&--active {
+			background-color: $accent;
+
+			&:hover,
+			&:focus {
+				a {
+					background-color: $accent;
+					color: $white;
+				}
+			}
+
+			a {
+				color: $white;
+				text-decoration: none;
+			}
+		}
+
+		&--prev,
+		&--next {
+			&:hover,
+			&:focus {
+				a {
+					background-color: $accent_hover;
+					color: $white;
+				}
+			}
+		}
+
+		&--prev {
+			margin-right: 15px;
+
+			@media (min-width: $md) {
+				margin-right: 22px;
+			}
+		}
+
+		&--next {
+			margin-left: 15px;
+
+			@media (min-width: $md) {
+				margin-left: 22px;
+			}
+		}
+	}
+}

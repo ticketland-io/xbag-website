@@ -1,0 +1,33 @@
+.social {
+	&__list {
+		@include list-reset();
+		display: flex;
+		align-items: center;
+	}
+
+	&__item {
+		width: 20px;
+		height: 20px;
+
+		&:not(:last-child) {
+			margin-right: 35px;
+		}
+
+		svg {
+			color: $black;
+		}
+
+		&:hover,
+		&:focus {
+			svg {
+				color: $accent;
+			}
+		}
+	}
+
+	&__link {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+}

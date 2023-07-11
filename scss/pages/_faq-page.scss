@@ -1,0 +1,11 @@
+.faq-page {
+	padding-top: 0;
+
+	.section-faq {
+		margin-bottom: 30px;
+
+		@media (min-width: $md) {
+			margin-bottom: 0;
+		}
+	}
+}
